@@ -4,7 +4,9 @@ set auto-load safe-path /
 define p_generic_list
   set var $n = $arg0
   while $n
-    print *($n)
+    if $n != 5
+      print *($n)
+    end
     set var $n = $n->next
   end
 end
